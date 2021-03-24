@@ -30,12 +30,14 @@
                 <td  class="align-middle">{{$pizza->price}}</td>
                 <td  class="align-middle"><img src="{{$pizza->cover}}" width="150" alt=""></td>
                 <td class="align-middle text-center" >
-                    <a href="{{route('pizzas.show',compact('pizza'))}}" class="btn btn-primary">Show<i class="fa fa-eye"></i></a>
+                    <a href="{{route('public.pizzas.show',compact('pizza'))}}" class="btn btn-primary">Show<i class="fa fa-eye"></i></a>
+                    @if(Auth::check())
                     <a href="{{route('pizzas.edit',['pizza'=>$pizza->id])}}" class="btn btn-success">Edit<i class="fas fa-edit"></i></a>
                     <!-- Button trigger modal -->
               <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal{{$pizza->id}}">Delete<i class="fas fa-trash"></i>
                       </button>
                       @include('layouts.modal')
+                      @endif
               </td>
             </tr>
             @endforeach

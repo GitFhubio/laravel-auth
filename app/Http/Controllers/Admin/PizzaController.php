@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+// devo cambiare namespace perche lho spostato in admin
+namespace App\Http\Controllers\Admin;
 use App\Pizza;
 use Illuminate\Http\Request;
+// devo inserire questo use
+use App\Http\Controllers\Controller;
 
 class PizzaController extends Controller
 {

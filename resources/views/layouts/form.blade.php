@@ -43,7 +43,7 @@ if(isset($edit) && !empty($edit)){//edit
       </div>
       <div class="d-flex justify-content-between">
         <input class="btn btn-primary" type="submit" name="" value="Invia">
-        <a href="{{route('pizzas.index')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Torna alla lista pizze</a>
+        <a href="{{route('public.pizzas.index')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Torna alla lista pizze</a>
       </div>
     </form>
   </div>
