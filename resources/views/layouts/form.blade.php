@@ -15,7 +15,7 @@ if(isset($edit) && !empty($edit)){//edit
       @method($method)
       <div class="form-group">
         <label for="name">Name</label>
-        <input class="form-control {{ $errors->has('name') ? 'is-invalid' : ''}}" type="text" name="title" value="{{isset($pizza) ? $pizza->name : ''}}">
+        <input class="form-control {{ $errors->has('name') ? 'is-invalid' : ''}}" type="text" name="name" value="{{isset($pizza) ? $pizza->name : ''}}">
         <div class="invalid-feedback">
           {{$errors->first('name')}}
         </div>
