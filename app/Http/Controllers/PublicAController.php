@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 class PublicAController extends Controller
 {
     public function index(){
+        // alternativa è dire if empty user
         if(Auth::check()){
             $user = Auth::user();
             // dd($user) è un null
@@ -14,6 +15,7 @@ class PublicAController extends Controller
             $logged=true;}
             else{
         $logged=false;
+        // devo inviarlo al template anche vuoto,giusto per passarlo
         $name='';
             }
         // return view('public-example',['logged'=>$logged,'name'=>$name]);
