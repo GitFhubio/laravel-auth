@@ -17,10 +17,12 @@ class PizzaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // qui dentro index e show praticamente non le uso piu
     public function index()
     {
-     $pizzas= Pizza::all();
-     return view('pizzas.index',compact('pizzas'));
+    //  $pizzas= Pizza::all();
+    //  return view('pizzas.index',compact('pizzas'));
+    return redirect()->route('public.pizzas.index');
     }
 
     /**
@@ -57,7 +59,9 @@ class PizzaController extends Controller
      */
     public function show(Pizza $pizza)
     {
-     return view('pizzas.show',compact('pizza'));
+        return redirect()->route('public.pizzas.show',compact('pizza'));
+        // qui potevo passare anche solo $pizza senza compact
+    //  return view('pizzas.show',compact('pizza'));
     }
 
     /**
