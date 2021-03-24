@@ -46,3 +46,6 @@ Route::prefix('admin')
     ->group(function () {
         Route::resource('pizzas', PizzaController::class);
     });
+
+    // per il controller delle rotte overridate faccio modifica in admin --resource controller
+    // per fare la redirect direttamente alle rotte che ho reso pubbliche
