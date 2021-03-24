@@ -1,7 +1,5 @@
 @extends('layouts.app')
-@section('title')
-Product
-@endsection
+@section('title','show')
 @section('content')
     <div class="product-container d-flex align-items-center flex-column">
         <div class="card" style="width: 20rem;">

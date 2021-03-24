@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','home')
 @section('nav')
 <div class="my-nav d-flex justify-content-around align-items-center">
     <div class="left text-center"><h1 class="text-center uppercase">Pizzas List</h1></div>
