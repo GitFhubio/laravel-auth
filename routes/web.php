@@ -22,10 +22,9 @@ Route::get('/',function(){
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('/private','PrivateController@index')->middleware('auth');
+Route::get('/private','PrivateAController@index')->middleware('auth');
 // middleware va nell'area di tutti i middleware disponibili e attiva quello inserito
-// Route::get('/public','PublicController@index');
+Route::get('/public','PublicAController@index');
 
 // Route::resource('auto',AutoController::class);
 
