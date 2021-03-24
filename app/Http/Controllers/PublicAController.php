@@ -10,7 +10,7 @@ class PublicAController extends Controller
         if(Auth::check()){
             $user = Auth::user();
             // dd($user) è un null
-            $name->$user->name;
+            $name=$user->name;
             $logged=true;}
             else{
         $logged=false;
