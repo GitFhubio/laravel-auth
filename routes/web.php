@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::get('/private','PrivateController@index')->middleware('auth');
+// middleware va nell'area di tutti i middleware disponibili e attiva quello inserito
+// Route::get('/public','PublicController@index');
+
+// Route::resource('auto',AutoController::class);
+
+Route::resource('/pizzas',PizzaController::class);
