@@ -4,9 +4,12 @@
     <div class="left text-center"><h1 class="text-center uppercase">Pizzas List</h1></div>
     <div class="center text-center">
     </div>
+    @if(Auth::check())
     <div class="right text-center">
+
     <a href="{{route('pizzas.create')}}" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Create a new pizza</a>
 </div>
+@endif
 </div>
 @endsection
 @section('content')
