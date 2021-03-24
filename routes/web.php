@@ -33,8 +33,8 @@ Route::get('/public','PublicAController@index');
 
 
 // rotte esercizio vero e proprio
-// mi serve name di queste rotte perche sto sovrascrivendo la resource e io
-// nelle viste avevo usato il nome delle rotte che però sovrascrivendo route non esiste piu
+// mi serve name di queste rotte e diverso(altrimenti proverebbe ad andare in admin) perche sto sovrascrivendo la resource e io
+// nelle viste avevo usato il nome delle rotte che però sovrascrivendo resource non esiste piu
 // mi darebbe errore
 Route::get('pizzas', 'PublicController@index')->name('public.pizzas.index');
 Route::get('pizzas/{pizza}', 'PublicController@show')->name('public.pizzas.show');
