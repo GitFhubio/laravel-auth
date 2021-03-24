@@ -4,7 +4,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Pizza;
 use Illuminate\Http\Request;
-// devo inserire questo use
+// devo inserire questo use(me lo dice l'ide,da solo devo ricordarmi della variazione nel namespace)
 use App\Http\Controllers\Controller;
 
 class PizzaController extends Controller
