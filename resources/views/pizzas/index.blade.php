@@ -24,7 +24,7 @@
             </tr>
           </thead>
           <tbody>
-            @foreach ($pizzas as $pizza)
+            @forelse ($pizzas as $pizza)
               <tr>
                 <th  class="align-middle" scope="row">{{$pizza->id}}</th>
                 <td  class="align-middle">{{$pizza->name}}</td>
@@ -42,7 +42,7 @@
                       @endif
               </td>
             </tr>
-            @endforeach
+            @empty
+              No pizzas
+            @endforelse
 @endsection
-
-
